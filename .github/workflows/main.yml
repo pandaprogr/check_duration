@@ -82,3 +82,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.          
+
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: my
+          registry: ghcr.io
+          tags: stage
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_TOKEN }}
