@@ -15,7 +15,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: check_duration
-          registry: ghcr.io
+          registry: ghcr.io/orgs/Webjets
           tags: stage
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
